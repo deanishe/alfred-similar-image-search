@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>net.deanishe.alfred-google-similar-images</string>
+	<key>connections</key>
+	<dict>
+		<key>0FD01297-DF3A-4A79-B6D6-2C50392FA271</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4DFF26EA-DB50-4772-A08B-0EF0773B121B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>1A6E0862-93B1-451C-9DC7-720B9060770D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AD4AC215-986C-4AD6-BF5A-AA98DB037978</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>29EB396D-C1FC-4A98-B43B-12A53499C69B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1A6E0862-93B1-451C-9DC7-720B9060770D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>EF252AF4-696C-4D87-B45E-6B7907B1A96E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>2ADCEE3B-932D-4E61-858E-EB48A0F0D498</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0FD01297-DF3A-4A79-B6D6-2C50392FA271</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>E5AE4A80-263D-4EB4-80AD-142B154CAEC1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1A6E0862-93B1-451C-9DC7-720B9060770D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>EF252AF4-696C-4D87-B45E-6B7907B1A96E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Dean Jackson</string>
+	<key>description</key>
+	<string>Search for images similar to the one selected in Finder</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Google Similar Images</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<false/>
+				<key>filetypes</key>
+				<array>
+					<string>public.jpeg</string>
+					<string>public.png</string>
+					<string>com.compuserve.gif</string>
+					<string>com.microsoft.bmp</string>
+				</array>
+				<key>name</key>
+				<string>Search for Similar Images…</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>E5AE4A80-263D-4EB4-80AD-142B154CAEC1</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string># Open the passed URL in default browser
+open "{query}"
+</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.script</string>
+			<key>uid</key>
+			<string>AD4AC215-986C-4AD6-BF5A-AA98DB037978</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string># Pass a filepath to this script and it will print the URL
+# of the corresponding page of search results
+/usr/bin/python url_for_image.py "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>1A6E0862-93B1-451C-9DC7-720B9060770D</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>Find Similar Images</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>29EB396D-C1FC-4A98-B43B-12A53499C69B</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<true/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Searching for Similar Images …</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>EF252AF4-696C-4D87-B45E-6B7907B1A96E</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/bin/osascript ./call_with_finder_selection.applescript
+</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>0FD01297-DF3A-4A79-B6D6-2C50392FA271</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>hotkey</key>
+				<integer>34</integer>
+				<key>hotmod</key>
+				<integer>1835008</integer>
+				<key>hotstring</key>
+				<string>I</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedApps</key>
+				<array>
+					<string>com.apple.finder</string>
+				</array>
+				<key>relatedAppsMode</key>
+				<integer>1</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>2ADCEE3B-932D-4E61-858E-EB48A0F0D498</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>Google Images supports PNG, JPG, GIF and BMP files</string>
+				<key>title</key>
+				<string>No Images Selected</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>4DFF26EA-DB50-4772-A08B-0EF0773B121B</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Perform a Google Image search based on a file on your computer.
+
+## Usage ##
+
+Google search supports PNG, JPG, GIF and BMP images only. This workflow
+is available as a File Action for any of these filetypes in Alfred.
+
+There is also a Hotkey to search based on the current Finder selection. If more
+than one image file is selected, on the first will be used.
+
+
+## Licence ##
+
+This workflow is released under the MIT License.</string>
+	<key>uidata</key>
+	<dict>
+		<key>0FD01297-DF3A-4A79-B6D6-2C50392FA271</key>
+		<dict>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
+		<key>1A6E0862-93B1-451C-9DC7-720B9060770D</key>
+		<dict>
+			<key>ypos</key>
+			<real>70</real>
+		</dict>
+		<key>29EB396D-C1FC-4A98-B43B-12A53499C69B</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>2ADCEE3B-932D-4E61-858E-EB48A0F0D498</key>
+		<dict>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
+		<key>4DFF26EA-DB50-4772-A08B-0EF0773B121B</key>
+		<dict>
+			<key>ypos</key>
+			<real>250</real>
+		</dict>
+		<key>AD4AC215-986C-4AD6-BF5A-AA98DB037978</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>E5AE4A80-263D-4EB4-80AD-142B154CAEC1</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>EF252AF4-696C-4D87-B45E-6B7907B1A96E</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
