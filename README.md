@@ -5,7 +5,6 @@ An [Alfred 2][alfred] workflow.
 
 Perform a Google Image search based on a file on your computer.
 
-**Insert demo here!**
 
 ## Usage ##
 
