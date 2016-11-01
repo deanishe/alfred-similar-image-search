@@ -1,7 +1,7 @@
 (*
 	Get images in Finder selection, then call the workflow again with
 	the first selected image.
-	
+
 	If no images are selected, return an error message, which
 	can be passed to a Post Notification action.
 *)
@@ -31,7 +31,7 @@ set theImages to my selectedImages()
 if (count of theImages) is greater than 0 then
 	set theImage to item 1 of theImages
 	set thePath to POSIX path of theImage
-	
+
 	-- Use the workflow's own external trigger
 	tell application "Alfred 2" to run trigger "Find Similar Images" in workflow "net.deanishe.alfred-google-similar-images" with argument thePath
 else

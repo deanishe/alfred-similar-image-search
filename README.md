@@ -1,7 +1,7 @@
 
 # Find Similar Images with Google Images Search #
 
-An [Alfred 2][alfred] workflow.
+A workflow for [Alfred 2 & 3][alfred].
 
 Perform a Google Image search based on a file on your computer.
 
