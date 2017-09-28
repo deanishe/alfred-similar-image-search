@@ -70,7 +70,7 @@ def similar_images_url(image_path):
     # Extract the `Location:` header
     for line in output.split('\n'):
         log('[response] %s', line)
-        if line.startswith('Location: '):
+        if line.lower().startswith('location: '):
             redir_url = line[10:]
             break
 
