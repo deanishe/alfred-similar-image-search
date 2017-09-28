@@ -30,6 +30,13 @@ USER_AGENT = 'alfred-similiar-image-search 0.1 ()'
 CURL = '/usr/bin/curl'
 
 
+def log(s, *args):
+    """Simple STDERR logger."""
+    if args:
+        s = s % args
+    print(s, file=sys.stderr)
+
+
 def similar_images_url(image_path):
     """Return URL for results page for similar images.
 
@@ -37,8 +44,9 @@ def similar_images_url(image_path):
         https://stackoverflow.com/questions/7584808/
 
     """
-
     redir_url = None
+
+    log('uploading %r to Google ...', image_path)
 
     cmd = [
         CURL,
@@ -56,10 +64,12 @@ def similar_images_url(image_path):
 
     # Encode and run command
     cmd = [s.encode('utf-8') for s in cmd]
+    log('cmd=%r', cmd)
     output = subprocess.check_output(cmd)
 
     # Extract the `Location:` header
     for line in output.split('\n'):
+        log('[response] %s', line)
         if line.startswith('Location: '):
             redir_url = line[10:]
             break

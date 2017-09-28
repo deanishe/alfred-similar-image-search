@@ -105,6 +105,28 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>acceptsmulti</key>
+				<false/>
+				<key>filetypes</key>
+				<array>
+					<string>public.jpeg</string>
+					<string>public.png</string>
+					<string>com.compuserve.gif</string>
+					<string>com.microsoft.bmp</string>
+				</array>
+				<key>name</key>
+				<string>Search for Similar Images…</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>E5AE4A80-263D-4EB4-80AD-142B154CAEC1</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -126,28 +148,6 @@
 			<string>1A6E0862-93B1-451C-9DC7-720B9060770D</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>acceptsmulti</key>
-				<false/>
-				<key>filetypes</key>
-				<array>
-					<string>public.jpeg</string>
-					<string>public.png</string>
-					<string>com.compuserve.gif</string>
-					<string>com.microsoft.bmp</string>
-				</array>
-				<key>name</key>
-				<string>Search for Similar Images…</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.action</string>
-			<key>uid</key>
-			<string>E5AE4A80-263D-4EB4-80AD-142B154CAEC1</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -363,7 +363,7 @@ This workflow is released under the MIT License.</string>
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>2.0</string>
+	<string>2.0.1</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>
