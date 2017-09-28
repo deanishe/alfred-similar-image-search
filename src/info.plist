@@ -15,6 +15,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>1A6E0862-93B1-451C-9DC7-720B9060770D</key>
@@ -26,6 +28,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>29EB396D-C1FC-4A98-B43B-12A53499C69B</key>
@@ -37,6 +41,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -45,6 +51,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>2ADCEE3B-932D-4E61-858E-EB48A0F0D498</key>
@@ -56,6 +64,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 		<key>E5AE4A80-263D-4EB4-80AD-142B154CAEC1</key>
@@ -67,6 +77,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
@@ -75,6 +87,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -88,6 +102,31 @@
 	<string>Google Similar Images</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string># Pass a filepath to this script and it will print the URL
+# of the corresponding page of search results
+/usr/bin/python url_for_image.py "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>1A6E0862-93B1-451C-9DC7-720B9060770D</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -108,7 +147,7 @@
 			<key>uid</key>
 			<string>E5AE4A80-263D-4EB4-80AD-142B154CAEC1</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -121,36 +160,19 @@
 				<string># Open the passed URL in default browser
 open "{query}"
 </string>
-				<key>type</key>
+				<key>scriptargtype</key>
 				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.script</string>
-			<key>uid</key>
-			<string>AD4AC215-986C-4AD6-BF5A-AA98DB037978</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string># Pass a filepath to this script and it will print the URL
-# of the corresponding page of search results
-/usr/bin/python url_for_image.py "{query}"</string>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>1A6E0862-93B1-451C-9DC7-720B9060770D</string>
+			<string>AD4AC215-986C-4AD6-BF5A-AA98DB037978</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -163,7 +185,7 @@ open "{query}"
 			<key>uid</key>
 			<string>29EB396D-C1FC-4A98-B43B-12A53499C69B</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -172,11 +194,7 @@ open "{query}"
 				<true/>
 				<key>onlyshowifquerypopulated</key>
 				<true/>
-				<key>output</key>
-				<integer>0</integer>
 				<key>removeextension</key>
-				<false/>
-				<key>sticky</key>
 				<false/>
 				<key>text</key>
 				<string>{query}</string>
@@ -188,7 +206,7 @@ open "{query}"
 			<key>uid</key>
 			<string>EF252AF4-696C-4D87-B45E-6B7907B1A96E</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -198,8 +216,11 @@ open "{query}"
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>/usr/bin/osascript ./call_with_finder_selection.applescript
-</string>
+				<string>/usr/bin/osascript ./call_with_finder_selection.applescript</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
@@ -208,7 +229,7 @@ open "{query}"
 			<key>uid</key>
 			<string>0FD01297-DF3A-4A79-B6D6-2C50392FA271</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -217,6 +238,10 @@ open "{query}"
 				<integer>0</integer>
 				<key>argument</key>
 				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
 				<key>hotkey</key>
 				<integer>34</integer>
 				<key>hotmod</key>
@@ -239,7 +264,7 @@ open "{query}"
 			<key>uid</key>
 			<string>2ADCEE3B-932D-4E61-858E-EB48A0F0D498</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -248,11 +273,7 @@ open "{query}"
 				<false/>
 				<key>onlyshowifquerypopulated</key>
 				<true/>
-				<key>output</key>
-				<integer>0</integer>
 				<key>removeextension</key>
-				<false/>
-				<key>sticky</key>
 				<false/>
 				<key>text</key>
 				<string>Google Images supports PNG, JPG, GIF and BMP files</string>
@@ -264,7 +285,7 @@ open "{query}"
 			<key>uid</key>
 			<string>4DFF26EA-DB50-4772-A08B-0EF0773B121B</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -286,45 +307,63 @@ This workflow is released under the MIT License.</string>
 	<dict>
 		<key>0FD01297-DF3A-4A79-B6D6-2C50392FA271</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
 			<real>250</real>
 		</dict>
 		<key>1A6E0862-93B1-451C-9DC7-720B9060770D</key>
 		<dict>
+			<key>xpos</key>
+			<integer>500</integer>
 			<key>ypos</key>
-			<real>70</real>
+			<integer>10</integer>
 		</dict>
 		<key>29EB396D-C1FC-4A98-B43B-12A53499C69B</key>
 		<dict>
+			<key>xpos</key>
+			<integer>100</integer>
 			<key>ypos</key>
 			<real>130</real>
 		</dict>
 		<key>2ADCEE3B-932D-4E61-858E-EB48A0F0D498</key>
 		<dict>
+			<key>xpos</key>
+			<integer>100</integer>
 			<key>ypos</key>
 			<real>250</real>
 		</dict>
 		<key>4DFF26EA-DB50-4772-A08B-0EF0773B121B</key>
 		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
 			<key>ypos</key>
 			<real>250</real>
 		</dict>
 		<key>AD4AC215-986C-4AD6-BF5A-AA98DB037978</key>
 		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
 		<key>E5AE4A80-263D-4EB4-80AD-142B154CAEC1</key>
 		<dict>
+			<key>xpos</key>
+			<integer>100</integer>
 			<key>ypos</key>
 			<real>10</real>
 		</dict>
 		<key>EF252AF4-696C-4D87-B45E-6B7907B1A96E</key>
 		<dict>
+			<key>xpos</key>
+			<integer>700</integer>
 			<key>ypos</key>
 			<real>130</real>
 		</dict>
 	</dict>
+	<key>version</key>
+	<string>2.0</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>
