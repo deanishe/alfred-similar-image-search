@@ -33,7 +33,7 @@ if (count of theImages) is greater than 0 then
 	set thePath to POSIX path of theImage
 
 	-- Use the workflow's own external trigger
-	tell application "Alfred 3" to run trigger "Find Similar Images" in workflow "net.deanishe.alfred-google-similar-images" with argument thePath
+	tell application "Alfred 4" to run trigger "Find Similar Images" in workflow "net.deanishe.alfred-google-similar-images" with argument thePath
 else
 	return "No images selected"
 end if
