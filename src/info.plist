@@ -23,7 +23,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>AD4AC215-986C-4AD6-BF5A-AA98DB037978</string>
+				<string>548A9D1A-DD6F-4ED3-B1B5-BA75E82EA2F9</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -105,8 +105,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>548A9D1A-DD6F-4ED3-B1B5-BA75E82EA2F9</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>acceptsmulti</key>
-				<false/>
+				<integer>0</integer>
 				<key>filetypes</key>
 				<array>
 					<string>public.jpeg</string>
@@ -146,31 +165,6 @@
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
 			<string>1A6E0862-93B1-451C-9DC7-720B9060770D</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string># Open the passed URL in default browser
-open "{query}"
-</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>AD4AC215-986C-4AD6-BF5A-AA98DB037978</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -243,11 +237,11 @@ open "{query}"
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>hotkey</key>
-				<integer>34</integer>
+				<integer>5</integer>
 				<key>hotmod</key>
-				<integer>1835008</integer>
+				<integer>524288</integer>
 				<key>hotstring</key>
-				<string>I</string>
+				<string>G</string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -340,12 +334,12 @@ This workflow is released under the MIT License.</string>
 			<key>ypos</key>
 			<real>250</real>
 		</dict>
-		<key>AD4AC215-986C-4AD6-BF5A-AA98DB037978</key>
+		<key>548A9D1A-DD6F-4ED3-B1B5-BA75E82EA2F9</key>
 		<dict>
 			<key>xpos</key>
-			<integer>700</integer>
+			<integer>695</integer>
 			<key>ypos</key>
-			<real>10</real>
+			<integer>10</integer>
 		</dict>
 		<key>E5AE4A80-263D-4EB4-80AD-142B154CAEC1</key>
 		<dict>
@@ -363,7 +357,7 @@ This workflow is released under the MIT License.</string>
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>2.1.0</string>
+	<string>2.1.1</string>
 	<key>webaddress</key>
 	<string></string>
 </dict>
